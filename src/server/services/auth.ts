@@ -1,1 +1,1 @@
-export class AuthService {}
+export const AuthService = () => {}

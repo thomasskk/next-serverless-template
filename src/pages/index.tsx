@@ -1,10 +1,13 @@
-import type { NextPage } from 'next'
+import { ReactElement } from 'react'
+import { DefaultLayout } from '~/layouts/DefaultLayout'
 import { t } from '~/utils/trpc'
 
-const Home: NextPage = () => {
+function Index() {
   t.auth.me.useQuery()
 
   return <div></div>
 }
 
-export default Home
+Index.getLayout = (page: ReactElement) => <DefaultLayout>{page}</DefaultLayout>
+
+export default Index
